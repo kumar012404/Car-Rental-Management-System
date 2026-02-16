@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #ff7200;
+  --primary-hover: #e66700;
+  --bg-dark: #0f0f0f;
+  --text-light: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(20px);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../images/paym.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-light);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  z-index: 10;
+}
+
+.card {
+  flex: 1.5;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.summary {
+  flex: 1;
+  background: rgba(255, 114, 0, 0.1);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #fff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-box {
+  margin-bottom: 25px;
+}
+
+.input-box label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-box input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: 15px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.input-box input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row .input-box {
+  flex: 1;
+}
+
+/* Credit Card Chip Visual */
+.card-visual {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.chip {
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(135deg, #d4af37, #f9e29c);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chip::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  top: 50%;
+}
+
+.card-type {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.price-summary h3 {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 5px;
+}
+
+.price-summary .amount {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-pay {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(255, 114, 0, 0.3);
+}
+
+.btn-pay:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+.btn-cancel {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background: rgba(231, 76, 60, 0.2);
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+@media (max-width: 850px) {
+  .payment-container {
+    flex-direction: column;
+    max-width: 500px;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  body {
+    height: auto;
+    padding: 40px 5%;
+  }
+}
