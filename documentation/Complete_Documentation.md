@@ -563,11 +563,11 @@ The **"CaRs Rental Management System"** is deployed on a standardized technical 
 1. **Install XAMPP** (Apache and MySQL components).
 2. **Start Apache and MySQL** from the XAMPP Control Panel.
 3. **Place project folder** inside the htdocs directory:  
-   `[XAMPP_INSTALL_DIR]\htdocs\rental.pdf\`
+   `[XAMPP_INSTALL_DIR]\htdocs\car\`
 4. **Import the SQL database** via `phpMyAdmin` (typically named `carproject.sql`).
 5. **Database Configuration:** Update individual connection settings in `connection.php` with your local database credentials.
 6. **Run the system:**  
-   Open your browser and navigate to: `http://localhost/rental.pdf/`
+   Open your browser and navigate to: `http://localhost/car/`
 
 ---
 
@@ -648,5 +648,6 @@ While the current iteration of the **"CaRs Rental Management System"** serves as
 | COMMENT | TEXT | Descriptive Feedback from Customer |
 
 ---
+
 
 
