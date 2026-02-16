@@ -95,7 +95,9 @@ This is a project for a car rental website. It is a project for the College Mini
 - Admin can delete a reservation by clicking the delete button.
 - Admin can view feedback by clicking the view button.
 
-
+Admin Password:
+Username: ADMIN
+Password: ADMIN
 
 
 
